@@ -1,0 +1,88 @@
+body {
+  background-image: url("../img/ciudad-noche.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+
+}
+.containerCentro{
+	position: absolute;
+	/*nos posicionamos en el centro del navegador*/
+	top:50%;
+	left:50%;
+	/*determinamos una anchura*/
+	width:400px;
+	/*indicamos que el margen izquierdo, es la mitad de la anchura*/
+	margin-left:-200px;
+	/*determinamos una altura*/
+	height:415px;
+	/*indicamos que el margen superior, es la mitad de la altura*/
+	margin-top:100px;
+	padding:5px;
+}
+
+.account-wall
+{
+    padding: 20px 0px 20px 0px;
+    background-color: #f7f7f7;
+    filter: alpha(opacity=92);
+    opacity: 0.92;
+    z-index: 10000;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.registro-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+
+.form-registro
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.need-help
+{
+    margin-top: 10px;
+}
+
+.error {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+
+.exito {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #000000;
+	background-color: #BCF5A9;
+	border-color: #088A08;
+}
+
+.reason {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #FF4000;
+	background-color: #F3F781;
+	border-color: #F3F781;
+}
+
+.letraTerminos{
+	font: small-caption;
+}
