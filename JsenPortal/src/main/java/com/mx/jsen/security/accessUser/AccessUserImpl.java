@@ -20,10 +20,10 @@ public class AccessUserImpl implements AccessUser{
 	@Autowired
 	private LoginWS client;
 	
-	public JLoginVO obtenerUsuario(String username, String pass) throws Exception {
+	public JLoginVO obtenerUsuario(Long numero, String pass) throws Exception {
 		
 		com.mx.jsen.application.client.login.JLoginVO response = client.login(
-				encoder.encriptarAndDesencriptar(username, "ENC"), 
+				numero, 
 				encoder.encriptarAndDesencriptar(pass, "ENC"));
 		
 		JLoginVO login = null;
@@ -31,9 +31,9 @@ public class AccessUserImpl implements AccessUser{
 			login = new JLoginVO();
 			login.setFechaUltimaSesion(response.getFechaUltimaSesion().toGregorianCalendar().getTime());
 			login.setRol(response.getRol());
-			login.setUsername(encoder.encriptarAndDesencriptar(response.getUsername(),"DES"));
+			login.setNumero(response.getNumero());
 			login.setId(response.getId());
-			login.setEmail(encoder.encriptarAndDesencriptar(response.getEmail(),"DES"));
+			login.setEmail(encoder.encriptarAndDesencriptar(response.getCorreo(),"DES"));
 		}
 		return login;
 	}

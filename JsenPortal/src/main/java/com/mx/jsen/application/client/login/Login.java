@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="username" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="numero" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/&gt;
  *         &lt;element name="password" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -28,36 +28,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "login", propOrder = {
-    "username",
+    "numero",
     "password"
 })
 public class Login {
 
-    protected String username;
+    protected Long numero;
     protected String password;
 
     /**
-     * Obtiene el valor de la propiedad username.
+     * Obtiene el valor de la propiedad numero.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Long }
      *     
      */
-    public String getUsername() {
-        return username;
+    public Long getNumero() {
+        return numero;
     }
 
     /**
-     * Define el valor de la propiedad username.
+     * Define el valor de la propiedad numero.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Long }
      *     
      */
-    public void setUsername(String value) {
-        this.username = value;
+    public void setNumero(Long value) {
+        this.numero = value;
     }
 
     /**

@@ -24,6 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _ConsultarLada_QNAME = new QName("http://registrarusuario.webservice.application.jsen.mx.com/", "consultarLada");
+    private final static QName _ConsultarLadaResponse_QNAME = new QName("http://registrarusuario.webservice.application.jsen.mx.com/", "consultarLadaResponse");
     private final static QName _RegistrarUsuario_QNAME = new QName("http://registrarusuario.webservice.application.jsen.mx.com/", "registrarUsuario");
     private final static QName _RegistrarUsuarioResponse_QNAME = new QName("http://registrarusuario.webservice.application.jsen.mx.com/", "registrarUsuarioResponse");
 
@@ -32,6 +34,22 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link ConsultarLada }
+     * 
+     */
+    public ConsultarLada createConsultarLada() {
+        return new ConsultarLada();
+    }
+
+    /**
+     * Create an instance of {@link ConsultarLadaResponse }
+     * 
+     */
+    public ConsultarLadaResponse createConsultarLadaResponse() {
+        return new ConsultarLadaResponse();
     }
 
     /**
@@ -48,6 +66,32 @@ public class ObjectFactory {
      */
     public RegistrarUsuarioResponse createRegistrarUsuarioResponse() {
         return new RegistrarUsuarioResponse();
+    }
+
+    /**
+     * Create an instance of {@link TblLada }
+     * 
+     */
+    public TblLada createTblLada() {
+        return new TblLada();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConsultarLada }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://registrarusuario.webservice.application.jsen.mx.com/", name = "consultarLada")
+    public JAXBElement<ConsultarLada> createConsultarLada(ConsultarLada value) {
+        return new JAXBElement<ConsultarLada>(_ConsultarLada_QNAME, ConsultarLada.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConsultarLadaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://registrarusuario.webservice.application.jsen.mx.com/", name = "consultarLadaResponse")
+    public JAXBElement<ConsultarLadaResponse> createConsultarLadaResponse(ConsultarLadaResponse value) {
+        return new JAXBElement<ConsultarLadaResponse>(_ConsultarLadaResponse_QNAME, ConsultarLadaResponse.class, null, value);
     }
 
     /**

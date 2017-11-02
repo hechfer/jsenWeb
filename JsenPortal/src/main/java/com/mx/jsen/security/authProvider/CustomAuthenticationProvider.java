@@ -34,7 +34,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider{
         String password = authentication.getCredentials().toString();
         
         try {
-        	JLoginVO login = accessUser.obtenerUsuario(name, password);
+        	JLoginVO login = accessUser.obtenerUsuario(Long.valueOf(name), password);
 			if(login != null){
 				List<GrantedAuthority> grantedAuths = new ArrayList<GrantedAuthority>();
 			    grantedAuths.add(new SimpleGrantedAuthority(login.getRol()));

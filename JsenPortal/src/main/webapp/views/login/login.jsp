@@ -29,9 +29,9 @@
 				<div class="account-wall">
 					<h1 class="text-center login-title"><strong>Identificate</strong></h1>
 					<form class="form-signin" action="<%=request.getContextPath()%>/login" method="post">
-						<input type="text" class="form-control" placeholder="Usuario..."
-							required autofocus name="username"> <input type="password" name="password"
-							class="form-control" placeholder="Contrase&ntilde;a..." required>
+						<input type="text" class="form-control" placeholder="Numero Celular"
+							required autofocus name="numero"> <input type="password" name="password"
+							class="form-control" placeholder="Contrase&ntilde;a" required>
 						<button class="btn btn-ms btn-success btn-block" type="submit">Login</button>
 						<a href="#" class="pull-right need-help">¿Olvidaste tu contrase&ntilde;a? </a><span
 							class="clearfix"></span>
@@ -54,7 +54,7 @@
 							</div>
 						</c:if>
 						<c:if test="${not empty param.error}">
-							<div class="error">Usuario y Contrase&ntilde;a invalidos</div>
+							<div class="error">Numero de Cel y Contrase&ntilde;a invalidos</div>
 						</c:if>
 						<c:if test="${param.reason eq 'sessionClosed'}">
 							<div class="reason">

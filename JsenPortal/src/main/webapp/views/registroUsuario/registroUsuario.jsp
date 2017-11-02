@@ -39,7 +39,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Ingresa tu Email"/>									
+									<input type="text" class="form-control" name="correo" id="correo"  placeholder="Ingresa tu Email"/>									
 								</div>
 								<small class="text-email"></small>
 							</div>
@@ -49,9 +49,20 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="username" id="username"  placeholder="Ingresa Nombre de Usuario" maxLength = "20"/>									
+									<input type="text" class="form-control" name="numero" id="numero"  placeholder="Ingresa N&uacute;mero Celuldar" maxLength = "20"/>									
 								</div>
-								<small class="text-username"></small>
+								<small class="text-numerosId"></small>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<select class="form-control" name="lada" id="lada">
+									</select>							
+								</div>
+								<small class="text-numerosId"></small>
 							</div>
 						</div>
 						

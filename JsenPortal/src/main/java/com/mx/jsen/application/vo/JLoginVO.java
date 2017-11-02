@@ -13,7 +13,7 @@ public class JLoginVO implements Serializable {
 	@JsonView(Views.Public.class)
 	private Long id;
 	@JsonView(Views.Public.class)
-	private String username;
+	private Long numero;
 	@JsonView(Views.Public.class)
 	private String password;
 	@JsonView(Views.Public.class)
@@ -39,12 +39,12 @@ public class JLoginVO implements Serializable {
 		this.id = id;
 	}
 
-	public String getUsername() {
-		return username;
+	public Long getNumero() {
+		return numero;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setNumero(Long numero) {
+		this.numero = numero;
 	}
 
 	public String getPassword() {

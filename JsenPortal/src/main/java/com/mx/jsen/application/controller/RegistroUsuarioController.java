@@ -16,6 +16,11 @@ import com.mx.jsen.application.util.Constantes;
 import com.mx.jsen.application.util.Views;
 import com.mx.jsen.security.encryption.DataEncryption;
 
+/**
+ * Controlador para el registro del usuario
+ * @author jsen
+ * @version 1.0
+ */
 @Controller
 public class RegistroUsuarioController {
 	
@@ -33,20 +38,32 @@ public class RegistroUsuarioController {
 	}
 	
 	@JsonView(Views.Public.class)
+	@RequestMapping(value = { "/consultarLada" })
+	@ResponseBody
+	public AjaxResponseBody consultarLada() {
+		AjaxResponseBody response = new AjaxResponseBody();
+		response.setStatus("OK");
+		response.setResponseBody(registrarUsuarioWS.consultarLada());
+		return response;
+	}
+	
+	@JsonView(Views.Public.class)
 	@RequestMapping(value = { "/registrarUsuario" })
 	@ResponseBody
 	public  AjaxResponseBody  registrarUsuario(
-			@RequestParam("email") String email,
-			@RequestParam("username") String username,
-			@RequestParam("password") String password) {
+			@RequestParam("correo") String correo,
+			@RequestParam("numero") Long numero,
+			@RequestParam("password") String password,
+			@RequestParam("lada") String lada) {
 		AjaxResponseBody response = new AjaxResponseBody();
 		String mensaje = null;
 		
 		try {
 			mensaje = registrarUsuarioWS.registrarUsuario(
-					encryption.encriptarAndDesencriptar(email,"ENC"),
-					encryption.encriptarAndDesencriptar(username,"ENC"),
-					encryption.encriptarAndDesencriptar(password,"ENC"));
+					encryption.encriptarAndDesencriptar(correo,"ENC"),
+					numero,
+					encryption.encriptarAndDesencriptar(password,"ENC"),
+					Long.valueOf(lada));
 		} catch (Exception e) {
 			logger.error("ERROR JSEN REGISTRAR USUARIO: "+e.getMessage());
 			mensaje = "ERROR JSEN REGISTRAR USUARIO";

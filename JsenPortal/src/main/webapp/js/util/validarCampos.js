@@ -307,7 +307,7 @@ var validarCamposJs = {
 			$('.has-success').find('.text-'+txtNumeros).css('display', 'none');
 			validarCamposJs.formularioValido = true;
 		} else if(numeros < minCharsNumeric){
-			if(obligatorio == 'SI'){		
+			if(obligatorio == 'SI'){	
 				$('.form-control').removeClass('form-control-success');
 	            $(numericID).parents('.form-group').removeClass('has-success');
 	            

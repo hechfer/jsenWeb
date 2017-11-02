@@ -45,7 +45,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 	        	.anyRequest().authenticated()// cuando esta autenticado puede acceder a todas las url
 	        .and()
 	        .formLogin() // login
-	        	.loginPage(LOGIN).passwordParameter("password").usernameParameter("username") // envia user y pass al provedor de autenticación.
+	        	.loginPage(LOGIN).passwordParameter("password").usernameParameter("numero") // envia user y pass al provedor de autenticación.
 	        	.failureHandler(customSimpleUrlAuthenticationFailureHandler()) // cuando falla la autenticación.
 	        	.successHandler(successHandler()) // cuando es exitosa la autenticación.
 	        	.permitAll()
@@ -82,6 +82,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 	  web.ignoring().antMatchers("/js/**");
 	  web.ignoring().antMatchers("/registroUsuario");
 	  web.ignoring().antMatchers("/registrarUsuario");
+	  web.ignoring().antMatchers("/consultarLada");
 	  //quitar
 	  web.ignoring().antMatchers("/prueba");
 	  web.ignoring().antMatchers("/prueba1");
